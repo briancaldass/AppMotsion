@@ -1,0 +1,69 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+	font-family: "font-icon";
+	src: url("../assets/fonts/menu_buttons_fonts/icomoon.eot?") format("eot"),
+	     url("../assets/fonts/menu_buttons_fonts/icomoon.woff") format("woff"),
+	     url("../assets/fonts/menu_buttons_fonts/icomoon.ttf") format("truetype"),
+	     url("../assets/fonts/menu_buttons_fonts/icomoon.svg#font-icon") format("svg");
+}
+
+
+ion-navbar{
+	.toolbar-background{
+		background-color: map-get($colors, rojo_principa);	
+	}
+	
+	.logo_nav{
+		width: 140px;
+	}
+
+	.menu_motsion{
+		background-color: transparent;
+	    color: white;
+	    width: 45px;
+	    font-size: 32px;
+	    font-weight: bold;
+	    box-shadow: none;
+	    height: 4.6rem;
+	}
+
+}
+
+
+.menu_button{
+	.icon-home{
+		font-family: "font-icon";
+		content: "\e90c"
+	}
+	.icon-image{
+		font-family: "font-icon";
+		content: "\e90a"
+	}
+	.icon-video{
+		font-family: "font-icon";
+		content: "\e903"
+	}
+	.icon-blog{
+		font-family: "font-icon";
+		content: "\e900"
+	}
+}
+
+
+
