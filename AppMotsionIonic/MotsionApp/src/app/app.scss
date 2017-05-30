@@ -16,11 +16,25 @@
 // automatically applied to the <body> element in the app.
 
 @font-face {
-	font-family: "font-icon";
-	src: url("../assets/fonts/menu_buttons_fonts/icomoon.eot?") format("eot"),
-	     url("../assets/fonts/menu_buttons_fonts/icomoon.woff") format("woff"),
-	     url("../assets/fonts/menu_buttons_fonts/icomoon.ttf") format("truetype"),
-	     url("../assets/fonts/menu_buttons_fonts/icomoon.svg#font-icon") format("svg");
+	font-family: "font";
+	src: url("../assets/fonts/menu_home/icomoon.ttf");
+	
+}
+
+
+.boton_home{
+	&:focus{
+		background-color: #e12d31;
+	}
+	&:focus > .iconos_home{
+		color: white;
+	}
+}
+
+.iconos_home{
+  font-family: 'font' !important;
+  color: #e12d31;
+  font-size: 60px;
 }
 
 
@@ -46,24 +60,9 @@ ion-navbar{
 }
 
 
-.menu_button{
-	.icon-home{
-		font-family: "font-icon";
-		content: "\e90c"
-	}
-	.icon-image{
-		font-family: "font-icon";
-		content: "\e90a"
-	}
-	.icon-video{
-		font-family: "font-icon";
-		content: "\e903"
-	}
-	.icon-blog{
-		font-family: "font-icon";
-		content: "\e900"
-	}
-}
+	
+
+
 
 
 

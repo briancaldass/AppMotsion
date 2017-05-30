@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -15,6 +15,7 @@ import { Videos } from '../pages/videos/videos';
 })
 export class MyApp {
   rootPage:any = HomePage;
+  nav: Nav;
   pages : Array<{logo:string, component:any}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -22,10 +23,9 @@ export class MyApp {
     this.rootPage=HomePage;
 
     this.pages =[
-      {logo: "icon-home",  component: HomePage},
-      {logo: "icon-image", component: Imagenes},
-      {logo: "icon-video", component: Videos},
-      {logo: "icon-blog",  component: Blog},
+      {logo: "h",  component: HomePage},
+      {logo: "t", component: Contacto},
+      {logo: "c",  component: Blog},
     ]
 
     platform.ready().then(() => {
@@ -35,5 +35,11 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  IrPagina(page){
+    this.nav.setRoot(page);
+  }
+
+
 }
 
